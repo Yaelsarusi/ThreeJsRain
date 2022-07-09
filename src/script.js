@@ -10,7 +10,7 @@ import gsap from 'gsap'
  * Base
  */
 // Debug
-const gui = new dat.GUI()
+//const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -47,8 +47,8 @@ const fontLoader = new FontLoader()
 const rainDropMaterial = new THREE.MeshBasicMaterial()
 rainDropMaterial.metalness = 0.7
 rainDropMaterial.roughness = 0.2
-gui.add(rainDropMaterial, 'metalness').min(0).max(0).step(0.0001)
-gui.add(rainDropMaterial, 'roughness').min(0).max(0).step(0.0001)
+// gui.add(rainDropMaterial, 'metalness').min(0).max(1).step(0.0001)
+// gui.add(rainDropMaterial, 'roughness').min(0).max(1).step(0.0001)
 
 rainDropMaterial.envMap = environmentMapTexture
 
