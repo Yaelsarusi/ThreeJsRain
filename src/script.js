@@ -56,12 +56,12 @@ const rainDropGeometry = new THREE.SphereBufferGeometry(0.1, 64,64)
 
 const animateRainDrop = (rainDrop)  => {
     rainDrop.position.x = (Math.random() - 0.5) * 20
-    rainDrop.position.y = (Math.random() - 0.5) * 20
+    rainDrop.position.y = (Math.random() - 0.5) * 10
     rainDrop.position.z = (Math.random() - 0.5) * 20
     const scale = Math.random()
     rainDrop.scale.set(scale, scale, scale)
     
-    gsap.to(rainDrop.position, { duration: Math.random()*4, delay: 0, y:-5, onComplete: () => animateRainDrop(rainDrop) })
+    gsap.to(rainDrop.position, { duration: Math.random()*4, delay: 0, y:-10, onComplete: () => animateRainDrop(rainDrop) })
 }
 
 for(let i = 0; i < 1000; i++)
